@@ -1,6 +1,6 @@
-# Amazon Product Tracker
+# Amazon Price Tracker
 
-**Live Website:** [https://amazonprice-tracker.vercel.app/]
+**Live Website:** https://amazonprice-tracker.vercel.app
 
 ## Purpose
 
@@ -13,7 +13,7 @@ This project is a web application for tracking Amazon product prices. It allows 
 - **FastAPI** - Modern, fast web framework for building APIs
 - **SQLAlchemy** - SQL toolkit and ORM
 - **PostgreSQL** - Database for storing product and price data
-- **Playwright** - Browser automation for web scraping
+- **ScrapingAnt** - Used to scrape Amazon and get final HTML of the page.
 - **Redis** - Caching and task queue
 - **BeautifulSoup4** - HTML parsing
 - **Pydantic** - Data validation
@@ -92,26 +92,9 @@ REDIS_URL=redis://localhost:6379
 SECRET_KEY=your-secret-key
 ```
 
-## Project Structure
-
-```
-amz_monorepo/
-├── amz_backend/          # FastAPI backend
-│   ├── main.py          # Application entry point
-│   ├── routes.py        # API routes
-│   ├── models.py        # Database models
-│   ├── scrape_script.py # Web scraper
-│   └── ...
-└── amz_frontend/        # React frontend
-    ├── src/            # Source code
-    ├── index.html      # HTML entry point
-    └── ...
-```
-
-## Development
-
-### Running the Full Stack
+## Running the Full Stack
 
 1. Start PostgreSQL and Redis servers
-2. Start the backend: `cd amz_backend && uvicorn main:app --reload`
-3. Start the frontend: `cd amz_frontend && npm run dev`
+2. Start the backend: `cd backend && uvicorn main:app`
+3. Start the frontend: `cd frontend && npm run dev`
+
